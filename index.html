@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGAL MOTION - Professional Commercial Cleaning Services in New York</title>
-    <meta name="description" content="IGAL MOTION offers reliable and efficient commercial cleaning services for offices and businesses in New York. Customized cleaning solutions since 2019.">
+    <title>IGAL MOTION - Premier Commercial Cleaning Services | New York's Trusted Partner</title>
+    <meta name="description" content="Transform your workspace with IGAL MOTION's premium commercial cleaning services. Serving New York since 2019 with customized solutions for offices, retail, and facilities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -14,308 +17,486 @@
         }
         
         :root {
-            --primary-color: #003366;
-            --secondary-color: #0066cc;
-            --accent-color: #4CAF50;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 2px 20px rgba(0,0,0,0.1);
-            --shadow-hover: 0 5px 30px rgba(0,0,0,0.15);
+            --primary: #0A1628;
+            --primary-light: #1E3A5F;
+            --accent: #00D9FF;
+            --accent-dark: #00A8CC;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --dark: #111827;
+            --gray-900: #1F2937;
+            --gray-800: #374151;
+            --gray-700: #4B5563;
+            --gray-600: #6B7280;
+            --gray-500: #9CA3AF;
+            --gray-400: #CBD5E1;
+            --gray-300: #E5E7EB;
+            --gray-200: #F3F4F6;
+            --gray-100: #F9FAFB;
+            --white: #FFFFFF;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #00D9FF 0%, #00A8CC 100%);
+            --gradient-dark: linear-gradient(180deg, #0A1628 0%, #1E3A5F 100%);
+            --gradient-hero: linear-gradient(135deg, rgba(10, 22, 40, 0.95) 0%, rgba(30, 58, 95, 0.95) 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --shadow-2xl: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+            --border-radius: 12px;
+            --border-radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
+            color: var(--gray-900);
+            background: var(--white);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Header Styles */
-        header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        /* Modern Navigation */
+        .nav-wrapper {
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .nav-wrapper.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            height: 80px;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
             display: flex;
             align-items: center;
+            gap: 0.5rem;
         }
         
-        .logo span {
-            color: var(--accent-color);
-            margin-left: 5px;
-        }
-        
-        .nav-links {
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-accent);
+            border-radius: 10px;
             display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
             list-style: none;
-            gap: 2rem;
         }
         
-        .nav-links a {
+        .nav-link {
+            color: var(--gray-700);
             text-decoration: none;
-            color: var(--text-dark);
             font-weight: 500;
-            transition: color 0.3s ease;
+            font-size: 0.95rem;
+            position: relative;
+            transition: var(--transition);
+            padding: 0.5rem 0;
         }
         
-        .nav-links a:hover {
-            color: var(--secondary-color);
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-accent);
+            transition: width 0.3s ease;
         }
         
-        .mobile-menu {
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 217, 255, 0.4);
+        }
+        
+        .mobile-menu-btn {
             display: none;
             flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
             cursor: pointer;
+            padding: 0.5rem;
         }
         
-        .mobile-menu span {
-            width: 25px;
+        .mobile-menu-btn span {
+            display: block;
+            width: 28px;
             height: 3px;
-            background: var(--primary-color);
-            margin: 3px 0;
-            transition: 0.3s;
+            background: var(--gray-700);
+            border-radius: 2px;
+            transition: var(--transition);
         }
         
-        /* Hero Section */
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(10px);
+        }
+        
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-10px);
+        }
+        
+        /* Hero Section - Enhanced */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--white);
-            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             position: relative;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             overflow: hidden;
+            padding: 120px 0 80px;
         }
         
         .hero::before {
             content: '';
             position: absolute;
             top: 0;
-            left: -50%;
-            width: 200%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,213.3C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat;
-            background-size: cover;
-            opacity: 0.1;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.133 7-7s-3.134-7-7-7-7 3.133-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.133 7-7s-3.134-7-7-7-7 3.133-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            top: -200px;
+            right: -200px;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -150px;
+            left: -150px;
+            animation-delay: 5s;
+        }
+        
+        .shape-3 {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            right: 10%;
+            animation-delay: 10s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(90deg); }
+            50% { transform: translateY(10px) rotate(180deg); }
+            75% { transform: translateY(-10px) rotate(270deg); }
         }
         
         .hero-content {
+            position: relative;
+            z-index: 2;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            position: relative;
-            z-index: 1;
         }
         
-        .hero-text h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease;
+        .hero-text {
+            animation: slideInLeft 1s ease;
         }
         
-        .hero-text .tagline {
-            font-size: 1.5rem;
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-title span {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.2s backwards;
+            line-height: 1.7;
         }
         
-        .hero-text p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.4s backwards;
-        }
-        
-        .cta-buttons {
+        .hero-buttons {
             display: flex;
             gap: 1rem;
-            animation: fadeInUp 1s ease 0.6s backwards;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
         
         .btn {
-            padding: 12px 30px;
-            border: none;
+            padding: 1rem 2rem;
             border-radius: 50px;
-            font-size: 1rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
         }
         
         .btn-primary {
-            background: var(--accent-color);
-            color: var(--white);
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
         .btn-primary:hover {
-            background: #45a049;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
         
         .btn-secondary {
-            background: transparent;
+            background: rgba(255, 255, 255, 0.1);
             color: var(--white);
-            border: 2px solid var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
         }
         
         .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-color);
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .trust-indicators {
+            display: flex;
             gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .stat {
-            text-align: center;
-            animation: fadeIn 1s ease 0.8s backwards;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-        }
-        
-        .stat-label {
-            opacity: 0.9;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background: var(--white);
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .section-header .subtitle {
-            color: var(--text-light);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
             align-items: center;
+            flex-wrap: wrap;
         }
         
-        .about-text h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-        
-        .about-text p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .about-features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .feature-item {
+        .trust-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.9);
         }
         
-        .feature-item::before {
-            content: '✓';
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            background: var(--accent-color);
-            color: var(--white);
+        .trust-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            text-align: center;
-            line-height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .about-image {
+        .hero-visual {
             position: relative;
-            border-radius: 10px;
+            animation: slideInRight 1s ease;
+        }
+        
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: var(--border-radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow);
-            height: 400px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+        
+        .hero-image-wrapper:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.9), rgba(102, 126, 234, 0.9)),
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f0f0" width="1200" height="800"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="24" fill="%23999">Professional Cleaning Service</text></svg>');
+            background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             font-size: 1.5rem;
+            font-weight: 600;
         }
         
-        /* Services Section */
+        .hero-stats {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem 2rem;
+            box-shadow: var(--shadow-2xl);
+            display: flex;
+            gap: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat {
+            text-align: center;
+            min-width: 100px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-top: 0.25rem;
+        }
+        
+        /* Services Section - Enhanced Cards */
         .services {
-            padding: 80px 0;
-            background: var(--bg-light);
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeIn 1s ease;
+        }
+        
+        .section-badge {
+            display: inline-block;
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
         
         .service-card {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: var(--border-radius-lg);
             padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            cursor: pointer;
         }
         
         .service-card::before {
@@ -323,121 +504,308 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            right: 0;
             height: 4px;
-            background: var(--accent-color);
+            background: var(--gradient-accent);
             transform: scaleX(0);
             transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-2xl);
         }
         
         .service-card:hover::before {
             transform: scaleX(1);
         }
         
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-accent);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
         }
         
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .service-description {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-features {
+            list-style: none;
+        }
+        
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--gray-700);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
             border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 0.75rem;
+        }
+        
+        /* About Section - Modern Layout */
+        .about {
+            padding: 100px 0;
+            background: var(--white);
+            position: relative;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-content {
+            padding-right: 2rem;
+        }
+        
+        .about-title {
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text {
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .about-stat {
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        .about-stat::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+        
+        .about-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+        
+        .about-stat-label {
+            color: var(--gray-600);
+            margin-top: 0.5rem;
+        }
+        
+        .about-visual {
+            position: relative;
+        }
+        
+        .about-image-main {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(0, 217, 255, 0.9)),
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23f0f0f0" width="800" height="600"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="20" fill="%23999">Team at Work</text></svg>');
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-2xl);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         
-        .service-card h3 {
-            color: var(--primary-color);
+        .about-image-float {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 200px;
+            height: 200px;
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .float-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
         
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.6;
+        /* Process Section */
+        .process {
+            padding: 100px 0;
+            background: var(--gray-100);
         }
         
-        /* Why Choose Us Section */
-        .why-us {
-            padding: 80px 0;
+        .process-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 4rem auto 0;
+        }
+        
+        .process-line {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gray-300);
+            z-index: 0;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-step {
+            text-align: center;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 0 auto 1.5rem;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .process-step:hover .step-number {
+            background: var(--gradient-accent);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+        
+        .step-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-description {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+        
+        /* Testimonials - Modern Carousel */
+        .testimonials {
+            padding: 100px 0;
             background: var(--white);
         }
         
-        .why-us-grid {
+        .testimonials-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-carousel {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .why-us-item {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .why-us-number {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            background: var(--primary-color);
-            color: var(--white);
-            border-radius: 50%;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .why-us-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .why-us-item p {
-            color: var(--text-light);
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-        
-        .testimonials-slider {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
         .testimonial-card {
-            background: var(--white);
+            background: var(--gray-100);
+            border-radius: var(--border-radius-lg);
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
             position: relative;
+            transition: var(--transition);
         }
         
-        .testimonial-card::before {
-            content: '"';
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .quote-icon {
             position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 4rem;
-            color: var(--accent-color);
-            opacity: 0.3;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.2;
         }
         
         .testimonial-text {
-            color: var(--text-light);
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--gray-700);
+            margin-bottom: 2rem;
             font-style: italic;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
         }
         
         .testimonial-author {
@@ -447,101 +815,341 @@
         }
         
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1.25rem;
         }
         
-        .author-info h4 {
-            color: var(--primary-color);
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: var(--primary);
             margin-bottom: 0.25rem;
         }
         
-        .author-info p {
-            color: var(--text-light);
-            font-size: 0.9rem;
+        .author-title {
+            color: var(--gray-600);
+            font-size: 0.875rem;
         }
         
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--white);
+        .rating {
+            display: flex;
+            gap: 0.25rem;
+            color: #FFC107;
+            font-size: 1.125rem;
+        }
+        
+        /* CTA Section - Premium Design */
+        .cta {
+            padding: 100px 0;
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(180deg); }
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .cta-section h2 {
-            font-size: 2.5rem;
+        .cta-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--white);
             margin-bottom: 1rem;
         }
         
-        .cta-section p {
-            font-size: 1.2rem;
+        .cta-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
-            opacity: 0.9;
         }
         
-        /* Footer */
-        footer {
-            background: var(--primary-color);
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-button {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cta-primary {
+            background: var(--gradient-accent);
             color: var(--white);
-            padding: 50px 0 20px;
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--gray-100);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .contact-info {
+            padding: 3rem;
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-form {
+            padding: 3rem;
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.1);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--gradient-accent);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+        }
+        
+        .contact-details h3 {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-details p {
+            color: var(--gray-600);
+        }
+        
+        /* Footer - Professional */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 60px 0 20px;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
         
         .footer-column h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
             margin-bottom: 1.5rem;
-            color: var(--accent-color);
+            color: var(--accent);
         }
         
-        .footer-column p,
-        .footer-column ul {
-            opacity: 0.9;
-            line-height: 1.8;
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin-bottom: 1rem;
         }
         
-        .footer-column ul {
+        .footer-links {
             list-style: none;
         }
         
-        .footer-column ul li {
-            margin-bottom: 0.5rem;
+        .footer-links li {
+            margin-bottom: 0.75rem;
         }
         
-        .footer-column a {
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--white);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: var(--transition);
         }
         
-        .footer-column a:hover {
-            color: var(--accent-color);
+        .social-link:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-3px);
         }
         
         .footer-bottom {
-            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            opacity: 0.8;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
         }
         
         /* Animations */
-        @keyframes fadeInUp {
+        @keyframes slideInLeft {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -549,143 +1157,253 @@
             }
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
+        /* Mobile Responsive - Complete Overhaul */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-visual {
                 display: none;
             }
             
-            .mobile-menu {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                padding: 2rem;
+                box-shadow: var(--shadow-xl);
+                transition: left 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
                 display: flex;
             }
             
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .hero {
+                padding: 100px 0 60px;
+                min-height: auto;
             }
             
-            .hero-text h1 {
+            .hero-title {
                 font-size: 2rem;
             }
             
-            .hero-text .tagline {
-                font-size: 1.2rem;
+            .hero-description {
+                font-size: 1rem;
             }
             
-            .cta-buttons {
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
                 justify-content: center;
-                flex-wrap: wrap;
             }
             
-            .hero-stats {
-                grid-template-columns: 1fr;
+            .trust-indicators {
+                flex-direction: column;
                 gap: 1rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-features {
-                grid-template-columns: 1fr;
+                align-items: flex-start;
             }
             
             .services-grid {
                 grid-template-columns: 1fr;
             }
             
-            .why-us-grid {
+            .process-steps {
                 grid-template-columns: 1fr;
             }
             
-            .testimonials-slider {
+            .process-line {
+                display: none;
+            }
+            
+            .testimonial-carousel {
                 grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image-float {
+                position: static;
+                width: 100%;
+                margin-top: 2rem;
             }
             
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Loading Animation */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Selection Styles */
+        ::selection {
+            background: var(--accent);
+            color: var(--white);
+        }
+        
+        ::-moz-selection {
+            background: var(--accent);
+            color: var(--white);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
+    <!-- Navigation -->
+    <div class="nav-wrapper" id="navbar">
         <nav class="container">
-            <a href="#" class="logo">IGAL<span>MOTION</span></a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#" class="logo">
+                <span class="logo-icon">✨</span>
+                IGAL MOTION
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-cta">Get Quote</a></li>
             </ul>
-            <div class="mobile-menu">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </nav>
-    </header>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Professional Commercial Cleaning Services</h1>
-                    <p class="tagline">Creating Cleaner, Healthier Workspaces Since 2019</p>
-                    <p>We provide customized cleaning solutions for offices, businesses, and facilities of all sizes in New York. Experience the difference of working with a trusted, family-owned cleaning company.</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary">Get Free Quote</a>
-                        <a href="#services" class="btn btn-secondary">Our Services</a>
+                    <span class="hero-badge">🏆 New York's Trusted Cleaning Partner Since 2019</span>
+                    <h1 class="hero-title">
+                        Transform Your Workspace with <span>Premium Commercial Cleaning</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience the IGAL MOTION difference. We deliver customized cleaning solutions that create healthier, more productive work environments for businesses across New York.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            Get Instant Quote →
+                        </a>
+                        <a href="tel:1234567890" class="btn btn-secondary">
+                            📞 Call (123) 456-7890
+                        </a>
+                    </div>
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>100% Satisfaction Guarantee</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Fully Insured & Bonded</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Eco-Friendly Products</span>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Years Experience</span>
+                
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image">
+                            Sparkling Clean Offices
+                        </div>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Satisfaction Rate</span>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Support</div>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Available Service</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About IGAL MOTION</h2>
-                <p class="subtitle">A family-owned business committed to excellence in commercial cleaning</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Your Trusted Cleaning Partner</h3>
-                    <p>Started as housekeepers with a vision, IGAL MOTION has grown into a trusted commercial cleaning service provider in New York. Since 2019, we've served a wide variety of clients including construction offices, businesses, kindergartens, and more.</p>
-                    <p>We understand that each facility comes with its own set of cleaning requirements. That's why our services are customized to meet the specific needs of each individual workspace, ensuring optimal cleanliness and hygiene.</p>
-                    <div class="about-features">
-                        <div class="feature-item">Family-Owned Business</div>
-                        <div class="feature-item">Customized Solutions</div>
-                        <div class="feature-item">Trained Professionals</div>
-                        <div class="feature-item">Eco-Friendly Products</div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    Professional Cleaning Excellence
                 </div>
             </div>
         </div>
@@ -695,71 +1413,183 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>Our Services</h2>
-                <p class="subtitle">Comprehensive cleaning solutions tailored to your needs</p>
+                <span class="section-badge">Our Services</span>
+                <h2 class="section-title">Comprehensive Cleaning Solutions</h2>
+                <p class="section-subtitle">
+                    From daily office maintenance to specialized deep cleaning, we've got you covered
+                </p>
             </div>
+            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🏢</div>
-                    <h3>Office Cleaning</h3>
-                    <p>Daily, weekly, or monthly office cleaning services to maintain a productive work environment.</p>
+                    <h3 class="service-title">Office Cleaning</h3>
+                    <p class="service-description">
+                        Keep your office pristine with our comprehensive daily, weekly, or monthly cleaning services tailored to your schedule.
+                    </p>
+                    <ul class="service-features">
+                        <li>Desk & surface sanitization</li>
+                        <li>Floor care & vacuuming</li>
+                        <li>Restroom maintenance</li>
+                        <li>Trash removal & recycling</li>
+                    </ul>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-icon">🏗️</div>
-                    <h3>Construction Cleanup</h3>
-                    <p>Post-construction cleaning to prepare your new space for occupancy.</p>
+                    <h3 class="service-title">Construction Cleanup</h3>
+                    <p class="service-description">
+                        Professional post-construction cleaning to prepare your new or renovated space for immediate occupancy.
+                    </p>
+                    <ul class="service-features">
+                        <li>Debris removal</li>
+                        <li>Dust elimination</li>
+                        <li>Window cleaning</li>
+                        <li>Final detail work</li>
+                    </ul>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-icon">🏫</div>
-                    <h3>Educational Facilities</h3>
-                    <p>Specialized cleaning for schools and kindergartens with child-safe products.</p>
+                    <h3 class="service-title">Educational Facilities</h3>
+                    <p class="service-description">
+                        Safe and thorough cleaning for schools and kindergartens using child-friendly, non-toxic products.
+                    </p>
+                    <ul class="service-features">
+                        <li>Classroom sanitization</li>
+                        <li>Playground cleaning</li>
+                        <li>Cafeteria maintenance</li>
+                        <li>Health-compliant protocols</li>
+                    </ul>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-icon">🏬</div>
-                    <h3>Retail Spaces</h3>
-                    <p>Keep your retail environment spotless and welcoming for customers.</p>
+                    <h3 class="service-title">Retail Spaces</h3>
+                    <p class="service-description">
+                        Create an inviting shopping experience with spotless retail environments that impress customers.
+                    </p>
+                    <ul class="service-features">
+                        <li>Showroom maintenance</li>
+                        <li>Display cleaning</li>
+                        <li>Customer area upkeep</li>
+                        <li>Entrance beautification</li>
+                    </ul>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">🧹</div>
-                    <h3>Deep Cleaning</h3>
-                    <p>Thorough deep cleaning services for a complete refresh of your space.</p>
+                    <div class="service-icon">✨</div>
+                    <h3 class="service-title">Deep Cleaning</h3>
+                    <p class="service-description">
+                        Intensive cleaning services for a complete refresh, perfect for seasonal maintenance or special occasions.
+                    </p>
+                    <ul class="service-features">
+                        <li>Carpet shampooing</li>
+                        <li>Upholstery cleaning</li>
+                        <li>High-touch disinfection</li>
+                        <li>Ventilation cleaning</li>
+                    </ul>
                 </div>
+                
                 <div class="service-card">
                     <div class="service-icon">🌙</div>
-                    <h3>After-Hours Cleaning</h3>
-                    <p>Flexible scheduling to clean your facility without disrupting business operations.</p>
+                    <h3 class="service-title">After-Hours Service</h3>
+                    <p class="service-description">
+                        Flexible scheduling options to clean your facility without disrupting your business operations.
+                    </p>
+                    <ul class="service-features">
+                        <li>Evening cleaning</li>
+                        <li>Weekend service</li>
+                        <li>Holiday availability</li>
+                        <li>Emergency response</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-us">
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content">
+                    <span class="section-badge">About Us</span>
+                    <h2 class="about-title">A Family Legacy of Cleanliness Excellence</h2>
+                    <p class="about-text">
+                        What started as a small family operation with a simple vision has grown into one of New York's most trusted commercial cleaning services. At IGAL MOTION, we believe that a clean workspace is the foundation of business success.
+                    </p>
+                    <p class="about-text">
+                        Since 2019, we've served construction offices, businesses, kindergartens, and countless other facilities with the same dedication and attention to detail that defined our humble beginnings. Every client receives customized solutions because we understand that no two spaces are alike.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="about-stat-number">5+</div>
+                            <div class="about-stat-label">Years of Excellence</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">500+</div>
+                            <div class="about-stat-label">Satisfied Clients</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">1M+</div>
+                            <div class="about-stat-label">Sq Ft Cleaned Monthly</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">100%</div>
+                            <div class="about-stat-label">Satisfaction Rate</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="about-image-main">
+                        Our Professional Team
+                    </div>
+                    <div class="about-image-float">
+                        <div class="float-icon">🏆</div>
+                        <h4>Award Winning Service</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray-600);">Recognized for excellence in commercial cleaning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
         <div class="container">
             <div class="section-header">
-                <h2>Why Choose IGAL MOTION</h2>
-                <p class="subtitle">What sets us apart from other cleaning services</p>
+                <span class="section-badge">Our Process</span>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-subtitle">
+                    Simple, efficient, and transparent - getting started is easy
+                </p>
             </div>
-            <div class="why-us-grid">
-                <div class="why-us-item">
-                    <span class="why-us-number">1</span>
-                    <h3>Experienced Team</h3>
-                    <p>Highly-trained cleaning technicians with years of professional experience.</p>
-                </div>
-                <div class="why-us-item">
-                    <span class="why-us-number">2</span>
-                    <h3>Customized Plans</h3>
-                    <p>Tailored cleaning solutions to meet your specific requirements and budget.</p>
-                </div>
-                <div class="why-us-item">
-                    <span class="why-us-number">3</span>
-                    <h3>Quality Guaranteed</h3>
-                    <p>We stand behind our work with a 100% satisfaction guarantee.</p>
-                </div>
-                <div class="why-us-item">
-                    <span class="why-us-number">4</span>
-                    <h3>Competitive Pricing</h3>
-                    <p>Fair and transparent pricing with no hidden fees or surprises.</p>
+            
+            <div class="process-timeline">
+                <div class="process-line"></div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Consultation</h3>
+                        <p class="step-description">We assess your needs and create a customized cleaning plan</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Quote</h3>
+                        <p class="step-description">Receive a transparent, competitive quote with no hidden fees</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Schedule</h3>
+                        <p class="step-description">Choose a convenient time that works for your business</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3 class="step-title">Clean & Maintain</h3>
+                        <p class="step-description">Enjoy consistent, high-quality cleaning services</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -769,37 +1599,57 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>What Our Clients Say</h2>
-                <p class="subtitle">Real feedback from satisfied customers</p>
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">
+                    Don't just take our word for it - hear from our satisfied customers
+                </p>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"IGAL MOTION has been maintaining our office for over two years now. Their attention to detail and professionalism is outstanding. Highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JD</div>
-                        <div class="author-info">
-                            <h4>John Davis</h4>
-                            <p>Office Manager</p>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-carousel">
+                    <div class="testimonial-card">
+                        <span class="quote-icon">"</span>
+                        <p class="testimonial-text">
+                            "IGAL MOTION transformed our office environment. Their attention to detail is remarkable, and the team is always professional and punctual. Best cleaning service we've ever had!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JR</div>
+                            <div class="author-info">
+                                <div class="author-name">Jennifer Rodriguez</div>
+                                <div class="author-title">Office Manager, Tech Solutions Inc.</div>
+                                <div class="rating">★★★★★</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The team is always punctual, thorough, and respectful. They've made keeping our kindergarten clean and safe so much easier."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <p>School Director</p>
+                    
+                    <div class="testimonial-card">
+                        <span class="quote-icon">"</span>
+                        <p class="testimonial-text">
+                            "As a kindergarten director, cleanliness and safety are my top priorities. IGAL MOTION exceeds expectations every time with their child-safe products and thorough approach."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MS</div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Stevens</div>
+                                <div class="author-title">Director, Sunshine Kindergarten</div>
+                                <div class="rating">★★★★★</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"After trying several cleaning services, IGAL MOTION stands out for their reliability and quality. They truly care about their work."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RC</div>
-                        <div class="author-info">
-                            <h4>Robert Chen</h4>
-                            <p>Business Owner</p>
+                    
+                    <div class="testimonial-card">
+                        <span class="quote-icon">"</span>
+                        <p class="testimonial-text">
+                            "Post-construction cleanup seemed overwhelming until we found IGAL MOTION. They handled everything perfectly and had our new space ready ahead of schedule."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DK</div>
+                            <div class="author-info">
+                                <div class="author-name">David Kim</div>
+                                <div class="author-title">CEO, Construction Partners LLC</div>
+                                <div class="rating">★★★★★</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -808,13 +1658,109 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section" id="contact">
+    <section class="cta">
         <div class="container">
-            <h2>Ready for a Cleaner Workspace?</h2>
-            <p>Contact us today for a free consultation and quote</p>
-            <div class="cta-buttons">
-                <a href="tel:1234567890" class="btn btn-primary">Call Now: (123) 456-7890</a>
-                <a href="mailto:info@igalmotion.com" class="btn btn-secondary">Email Us</a>
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Experience the Difference?</h2>
+                <p class="cta-description">
+                    Join hundreds of satisfied businesses who trust IGAL MOTION for their commercial cleaning needs
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-button cta-primary">
+                        Get Your Free Quote Today
+                    </a>
+                    <a href="tel:1234567890" class="cta-button cta-secondary">
+                        📞 Call Now: (123) 456-7890
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Contact Us</span>
+                <h2 class="section-title">Let's Start Your Cleaning Journey</h2>
+                <p class="section-subtitle">
+                    Get in touch for a free consultation and customized quote
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Get In Touch</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Serving all of New York City and surrounding areas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@igalmotion.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Mon-Fri: 8AM - 6PM<br>Sat: 9AM - 4PM<br>Sun: Emergency Only</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Your Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="service">Service Needed</label>
+                        <select id="service" class="form-input">
+                            <option>Select a service</option>
+                            <option>Office Cleaning</option>
+                            <option>Construction Cleanup</option>
+                            <option>Educational Facilities</option>
+                            <option>Retail Spaces</option>
+                            <option>Deep Cleaning</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" class="form-textarea" placeholder="Tell us about your cleaning needs..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -824,98 +1770,130 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>About IGAL MOTION</h3>
-                    <p>Professional commercial cleaning services in New York. Family-owned and operated since 2019, we're committed to creating cleaner, healthier workspaces for our clients.</p>
+                    <h3>IGAL MOTION</h3>
+                    <p>Your trusted commercial cleaning partner in New York. Family-owned and operated since 2019, we're committed to creating cleaner, healthier workspaces.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">t</a>
+                        <a href="#" class="social-link">in</a>
+                        <a href="#" class="social-link">@</a>
+                    </div>
                 </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#services">Office Cleaning</a></li>
-                        <li><a href="#services">Construction Cleanup</a></li>
-                        <li><a href="#services">Educational Facilities</a></li>
-                        <li><a href="#services">Deep Cleaning</a></li>
-                    </ul>
-                </div>
+                
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Our Services</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <ul class="footer-links">
+                        <li><a href="#about">→ About Us</a></li>
+                        <li><a href="#services">→ Our Services</a></li>
+                        <li><a href="#testimonials">→ Testimonials</a></li>
+                        <li><a href="#contact">→ Contact</a></li>
+                        <li><a href="#">→ Get Quote</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">→ Office Cleaning</a></li>
+                        <li><a href="#services">→ Construction Cleanup</a></li>
+                        <li><a href="#services">→ Educational Facilities</a></li>
+                        <li><a href="#services">→ Retail Spaces</a></li>
+                        <li><a href="#services">→ Deep Cleaning</a></li>
+                    </ul>
+                </div>
+                
                 <div class="footer-column">
                     <h3>Contact Info</h3>
                     <p>📍 New York, NY</p>
                     <p>📞 (123) 456-7890</p>
                     <p>✉️ info@igalmotion.com</p>
-                    <p>🕒 Mon-Fri: 8AM-6PM</p>
+                    <p>🕒 Mon-Fri: 8AM - 6PM</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 IGAL MOTION. All rights reserved.</p>
+                <p>&copy; 2024 IGAL MOTION. All Rights Reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const offset = 100;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-            }
-        });
-
-        // Mobile menu toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
         
-        mobileMenu.addEventListener('click', function() {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.background = 'white';
-            navLinks.style.padding = '1rem';
-            navLinks.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your interest! We\'ll contact you within 24 hours.');
+            e.target.reset();
         });
-
+        
         // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
-        const observer = new IntersectionObserver(function(entries) {
+        
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 1s ease';
+                    entry.target.style.animation = 'fadeIn 1s ease forwards';
                 }
             });
         }, observerOptions);
-
-        document.querySelectorAll('.service-card, .why-us-item, .testimonial-card').forEach(el => {
-            observer.observe(el);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
         });
     </script>
 </body>
