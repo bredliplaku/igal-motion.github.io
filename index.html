@@ -1,611 +1,1128 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IGAL MOTION · Premier Commercial Cleaning in New York</title>
-  <meta name="description" content="IGAL MOTION provides premium, customised commercial cleaning for offices, retail and facilities across New York. Fully insured, reliable and eco‑conscious since 2019." />
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="IGAL MOTION · Premier Commercial Cleaning in New York" />
-  <meta property="og:description" content="Premium, customised commercial cleaning. Fully insured & eco‑conscious. Get a free quote today." />
-  <meta property="og:image" content="/assets/og-cover.jpg" />
-  <meta property="og:url" content="https://www.igalmotion.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="/favicon.ico" />
-
-  <style>
-    :root {
-      --brand-900:#0A1628; --brand-700:#163256; --brand-600:#1E3A5F;
-      --accent-500:#00CFE6; --accent-600:#00A8CC; --accent-700:#008EAD;
-      --ink-900:#0F172A; --ink-700:#334155; --ink-600:#475569; --ink-500:#64748B;
-      --paper:#FFFFFF; --paper-50:#F8FAFC; --paper-100:#EEF2F7; --paper-200:#E2E8F0;
-      --radius:14px; --radius-lg:22px; --shadow-md:0 10px 25px rgba(2,8,23,.10);
-      --shadow-lg:0 18px 45px rgba(2,8,23,.16);
-      --transition:all .25s cubic-bezier(.4,0,.2,1);
-    }
-    * { box-sizing:border-box }
-    html { scroll-behavior:smooth }
-    body { margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink-900); background:var(--paper); line-height:1.6 }
-    img { max-width:100%; height:auto; display:block }
-    a { color:inherit }
-    .container { max-width:1200px; margin-inline:auto; padding-inline:20px }
-
-    /* Skip link */
-    .skip-link { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
-    .skip-link:focus { position:fixed; left:16px; top:16px; width:auto; height:auto; background:var(--paper); padding:.75rem 1rem; border-radius:8px; box-shadow:var(--shadow-md); z-index:10000 }
-
-    /* Header */
-    header { position:sticky; top:0; z-index:1000; backdrop-filter:saturate(150%) blur(8px); background:rgba(255,255,255,.86); border-bottom:1px solid var(--paper-200) }
-    .nav { display:flex; align-items:center; justify-content:space-between; min-height:72px }
-    .brand { display:flex; align-items:center; gap:.65rem; text-decoration:none }
-    .brand-mark { width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg, var(--accent-500), var(--accent-700)); display:grid; place-items:center; color:white; font-weight:800 }
-    .brand-name { font-family:Poppins, Inter, system-ui, sans-serif; font-weight:800; letter-spacing:.2px; font-size:1.25rem; background:linear-gradient(135deg,#667EEA,#764BA2); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent }
-
-    .nav-list { display:flex; gap:1.5rem; align-items:center; list-style:none; margin:0; padding:0 }
-    .nav-link { text-decoration:none; color:var(--ink-700); font-weight:600; position:relative }
-    .nav-link:after { content:""; position:absolute; inset:auto 0 -6px 0; height:2px; width:0; background:linear-gradient(90deg,var(--accent-500),var(--accent-700)); transition:width .25s }
-    .nav-link:focus-visible, .nav-link:hover { color:var(--brand-900) }
-    .nav-link:hover:after, .nav-link:focus-visible:after { width:100% }
-
-    .btn { --p:1rem 1.2rem; --bg:var(--brand-900); --fg:#fff; display:inline-flex; align-items:center; gap:.5rem; padding:var(--p); border-radius:999px; background:var(--bg); color:var(--fg); text-decoration:none; font-weight:700; box-shadow:var(--shadow-md); transition:var(--transition); border:0; cursor:pointer }
-    .btn:hover { transform:translateY(-2px) }
-    .btn:active { transform:translateY(0) }
-    .btn-outline { --bg:transparent; --fg:var(--brand-900); border:2px solid var(--paper-200); box-shadow:none }
-    .btn-accent { --bg:linear-gradient(135deg, var(--accent-500), var(--accent-700)) }
-
-    .menu-toggle { display:none; background:none; border:0; padding:.5rem; border-radius:8px }
-    .menu-toggle[aria-expanded="true"] { background:var(--paper-100) }
-
-    /* Hero */
-    .hero { background:radial-gradient(1200px 600px at 80% -10%, rgba(0,207,230,.25), transparent), linear-gradient(180deg, var(--brand-900) 0%, var(--brand-700) 100%); color:white }
-    .hero-inner { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; padding:84px 0 }
-    .kicker { display:inline-flex; gap:.5rem; align-items:center; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); padding:.35rem .75rem; border-radius:999px; font-weight:700 }
-    .hero h1 { font-family:Poppins, Inter, system-ui, sans-serif; font-size:clamp(2.2rem, 3.5vw, 3.4rem); line-height:1.1; margin:.75rem 0 1rem }
-    .hero p { color:rgba(255,255,255,.88); font-size:1.1rem; margin:0 0 1.5rem }
-    .hero-actions { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:.5rem }
-    .hero-card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); border-radius:var(--radius-lg); padding:18px; display:grid; gap:10px; box-shadow:0 20px 50px rgba(0,0,0,.15) }
-    .hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:14px }
-    .stat { text-align:center }
-    .stat .n { font-weight:800; font-size:1.4rem }
-    .stat .l { font-size:.85rem; opacity:.8 }
-
-    /* Sections */
-    section { padding:84px 0 }
-    .section-hd { text-align:center; max-width:800px; margin-inline:auto 40px; margin-bottom:38px }
-    .section-hd h2 { font-family:Poppins, Inter, system-ui, sans-serif; font-size:clamp(1.8rem, 2.6vw, 2.4rem) }
-    .muted { color:var(--ink-600) }
-
-    /* Services */
-    .grid { display:grid; gap:22px }
-    .grid-3 { grid-template-columns:repeat(3, minmax(0,1fr)) }
-    .card { background:var(--paper); border:1px solid var(--paper-200); border-radius:var(--radius-lg); padding:22px; box-shadow:var(--shadow-md); transition:var(--transition) }
-    .card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg) }
-    .svc-icon { width:64px; height:64px; border-radius:16px; display:grid; place-items:center; font-size:28px; color:white; background:linear-gradient(135deg, var(--accent-500), var(--accent-700)) }
-    .card h3 { margin:.85rem 0 .35rem; font-size:1.25rem }
-    .tick { list-style:none; padding:0; margin:.5rem 0 0; display:grid; gap:.4rem }
-    .tick li { display:flex; align-items:flex-start; gap:.5rem; color:var(--ink-700) }
-    .tick li::before { content:"✓"; color:#10B981; font-weight:900; margin-top:.1rem }
-
-    /* About */
-    .about { background:var(--paper-50) }
-    .about-inner { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center }
-    .about-photo { border-radius:var(--radius-lg); min-height:360px; background:linear-gradient(135deg, rgba(102,126,234,.85), rgba(0,207,230,.85)); display:grid; place-items:center; color:white; font-weight:700; box-shadow:var(--shadow-lg) }
-    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:18px }
-    .stat-plain { background:var(--paper); border:1px solid var(--paper-200); border-radius:14px; padding:16px; text-align:center }
-    .stat-plain .n { font-weight:800; font-size:1.4rem; color:var(--brand-900) }
-    .stat-plain .l { color:var(--ink-600); font-size:.85rem }
-
-    /* Process */
-    .process { background:var(--paper-50) }
-    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:18px }
-    .step { text-align:center }
-    .bubble { width:74px; height:74px; border-radius:50%; display:grid; place-items:center; margin-inline:auto 14px; border:3px solid var(--accent-500); font-weight:800; color:var(--accent-700); background:var(--paper) }
-
-    /* Testimonials */
-    .testimonials .grid-3 { align-items:stretch }
-    .quote { position:relative; padding-top:8px }
-    .quote:before { content:"“"; position:absolute; right:16px; top:-10px; font-size:54px; color:var(--accent-600); opacity:.2 }
-    .author { display:flex; align-items:center; gap:.8rem; margin-top:1rem }
-    .avatar { width:52px; height:52px; border-radius:50%; background:linear-gradient(135deg,#667EEA,#764BA2); color:#fff; display:grid; place-items:center; font-weight:800 }
-    .stars { color:#FFC107; letter-spacing:2px }
-
-    /* CTA */
-    .cta { background:linear-gradient(135deg, var(--brand-900), var(--brand-600)); color:#fff; border-radius:var(--radius-lg) }
-    .cta .inner { display:grid; grid-template-columns:1fr auto; gap:22px; align-items:center; padding:28px }
-
-    /* Contact */
-    .contact { background:var(--paper-50) }
-    form { display:grid; gap:14px }
-    label { font-weight:600; color:var(--ink-700) }
-    input, select, textarea { width:100%; padding:.85rem 1rem; border:1.5px solid var(--paper-200); border-radius:12px; font:inherit; transition:border-color .2s, box-shadow .2s; background:#fff }
-    input:focus, select:focus, textarea:focus { outline:none; border-color:var(--accent-600); box-shadow:0 0 0 4px rgba(0, 207, 230, .12) }
-    .grid-2 { grid-template-columns:repeat(2, minmax(0,1fr)) }
-    .help { color:var(--ink-600); font-size:.9rem }
-
-    /* Footer */
-    footer { background:var(--brand-900); color:#d9e1ea }
-    .foot-top { display:grid; gap:28px; grid-template-columns:2fr 1fr 1fr 1fr; padding:48px 0 }
-    .foot-top a { color:#d9e1ea; text-decoration:none }
-    .foot-top a:hover { color:#fff }
-    .foot-bottom { border-top:1px solid rgba(255,255,255,.12); padding:16px 0; font-size:.9rem; color:#b9c3cf; display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between }
-
-    /* Responsiveness */
-    @media (max-width: 1024px) {
-      .hero-inner { grid-template-columns:1fr }
-      .about-inner { grid-template-columns:1fr }
-      .grid-3, .steps, .stats { grid-template-columns:1fr 1fr }
-      .foot-top { grid-template-columns:1fr 1fr }
-    }
-    @media (max-width: 640px) {
-      .nav-list { display:none; position:fixed; inset:72px 0 auto 0; background:#fff; border-bottom:1px solid var(--paper-200); padding:16px; z-index:999 }
-      .nav-list.open { display:grid; gap:10px }
-      .menu-toggle { display:inline-flex }
-      .grid-3, .steps, .stats, .foot-top, .grid-2 { grid-template-columns:1fr }
-      .cta .inner { grid-template-columns:1fr }
-      .sticky-cta { position:fixed; inset:auto 16px 16px 16px; z-index:999; display:flex; justify-content:center }
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      * { animation:none !important; transition:none !important }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGAL MOTION | Professional Commercial Cleaning Services - New York</title>
+    <meta name="description" content="IGAL MOTION provides comprehensive commercial cleaning services for offices, businesses, and facilities throughout New York. Customized solutions since 2019.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #002563;
+            --primary-dark: #001a42;
+            --secondary: #0066cc;
+            --accent: #00a8cc;
+            --dark: #1a1a1a;
+            --gray-900: #2d2d2d;
+            --gray-800: #404040;
+            --gray-700: #595959;
+            --gray-600: #737373;
+            --gray-500: #8c8c8c;
+            --gray-400: #a6a6a6;
+            --gray-300: #bfbfbf;
+            --gray-200: #d9d9d9;
+            --gray-100: #f2f2f2;
+            --gray-50: #fafafa;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Professional Navigation */
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-cta {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.75rem;
+            border: none;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .nav-cta:hover {
+            background: var(--primary-dark);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background: var(--gray-700);
+            transition: var(--transition);
+        }
+        
+        /* Hero Section - Professional */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+            font-size: 1rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: var(--gray-100);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 600px;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .stat {
+            text-align: left;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Services Section - Professional Grid */
+        .services {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gray-100);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .service-description {
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-features {
+            list-style: none;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        
+        .service-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .service-features li::before {
+            content: '■';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.5rem;
+            top: 0.85rem;
+        }
+        
+        /* About Section - Corporate Style */
+        .about {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text {
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: var(--gray-50);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .about-stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+        
+        .about-stat-label {
+            color: var(--gray-600);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .about-image {
+            background: var(--gray-100);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-500);
+            font-size: 1.25rem;
+            border: 1px solid var(--gray-200);
+        }
+        
+        /* Why Choose Us */
+        .why-us {
+            padding: 100px 0;
+            background: var(--gray-50);
+        }
+        
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .why-us-item {
+            text-align: center;
+        }
+        
+        .why-us-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .why-us-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .why-us-item p {
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--gray-300);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .footer-column p,
+        .footer-column ul {
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-column a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--white);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        /* Contact Form */
+        .contact {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info {
+            padding: 2rem;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .contact-item p {
+            color: var(--gray-600);
+        }
+        
+        .contact-form {
+            background: var(--gray-50);
+            padding: 2.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+        
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-300);
+            background: var(--white);
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+        
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .form-submit:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                padding: 2rem;
+                box-shadow: var(--shadow-lg);
+                transition: left 0.3s ease;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header>
-    <div class="container nav" role="navigation" aria-label="Main">
-      <a class="brand" href="#home">
-        <span class="brand-mark" aria-hidden="true">✨</span>
-        <span class="brand-name">IGAL MOTION</span>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle menu">
-        ☰
-      </button>
-
-      <ul class="nav-list" id="primaryNav">
-        <li><a class="nav-link" href="#services">Services</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#process">Process</a></li>
-        <li><a class="nav-link" href="#testimonials">Testimonials</a></li>
-        <li><a class="btn btn-accent" href="#quote">Get a quote</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="home" aria-label="Intro">
-      <div class="container hero-inner">
-        <div>
-          <span class="kicker" aria-label="Trusted since 2019">🏆 New York’s trusted partner since 2019</span>
-          <h1>Premium commercial cleaning—customised to your workplace</h1>
-          <p>Healthier spaces, happier teams. We deliver meticulous, reliable cleaning for offices, retail and education—fully insured, vetted staff and eco‑friendly methods as standard.</p>
-          <div class="hero-actions">
-            <a class="btn btn-accent" href="#quote">Get an instant quote</a>
-            <a class="btn btn-outline" href="tel:+12125550123" aria-label="Call IGAL MOTION on +1 212 555 0123">📞 +1 212 555 0123</a>
-          </div>
-          <div class="hero-card" aria-describedby="hero-stats">
-            <strong>Why businesses choose us</strong>
-            <div class="hero-stats" id="hero-stats">
-              <div class="stat"><div class="n">100%</div><div class="l">Satisfaction policy</div></div>
-              <div class="stat"><div class="n">Insured</div><div class="l">& bonded team</div></div>
-              <div class="stat"><div class="n">Eco</div><div class="l">Non‑toxic products</div></div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="hero-card" aria-labelledby="quick-quote">
-            <h2 id="quick-quote" style="margin:0">Quick quote</h2>
-            <p class="muted" style="margin:0">Tell us a few details—no obligation.</p>
-            <form id="heroQuote" style="margin-top:10px">
-              <div class="grid grid-2">
-                <div>
-                  <label for="hq-name">Name</label>
-                  <input id="hq-name" name="name" autocomplete="name" required />
-                </div>
-                <div>
-                  <label for="hq-email">Email</label>
-                  <input id="hq-email" name="email" type="email" autocomplete="email" required />
-                </div>
-              </div>
-              <div class="grid grid-2">
-                <div>
-                  <label for="hq-phone">Phone</label>
-                  <input id="hq-phone" name="phone" type="tel" inputmode="tel" placeholder="+1 212 555 0123" />
-                </div>
-                <div>
-                  <label for="hq-service">Service</label>
-                  <select id="hq-service" name="service" required>
-                    <option value="" disabled selected>Select…</option>
-                    <option>Office cleaning</option>
-                    <option>Construction clean‑up</option>
-                    <option>Education facilities</option>
-                    <option>Retail spaces</option>
-                    <option>Deep clean</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label for="hq-notes">Notes</label>
-                <textarea id="hq-notes" name="notes" rows="3" placeholder="Size, frequency, access…"></textarea>
-              </div>
-              <input type="text" name="company" id="hq-company" tabindex="-1" aria-hidden="true" style="position:absolute; left:-10000px; opacity:0" />
-              <button class="btn btn-accent" type="submit">Request quote</button>
-              <div class="help" id="hq-help" role="status" aria-live="polite"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="sticky-cta"><a class="btn btn-accent" href="#quote">Get a quote</a></div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" aria-labelledby="services-hd">
-      <div class="container">
-        <div class="section-hd">
-          <h2 id="services-hd">Comprehensive cleaning solutions</h2>
-          <p class="muted">From daily office maintenance to specialist deep cleans—tailored schedules, consistent teams, measurable results.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card">
-            <div class="svc-icon" aria-hidden="true">🏢</div>
-            <h3>Office cleaning</h3>
-            <p class="muted">Quiet, efficient service during or after hours. Desks, kitchens, receptions and washrooms immaculately maintained.</p>
-            <ul class="tick">
-              <li>High‑touch disinfection</li>
-              <li>Floors, glass & kitchens</li>
-              <li>Waste & recycling</li>
-              <li>Consumables management</li>
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">IGAL MOTION</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+                <li><a href="#contact" class="nav-cta">Get Quote</a></li>
             </ul>
-          </article>
-          <article class="card">
-            <div class="svc-icon" aria-hidden="true">🏗️</div>
-            <h3>Construction clean‑up</h3>
-            <p class="muted">Post‑build sparkle cleans to practical completion—safe, sequenced and site‑ready.</p>
-            <ul class="tick">
-              <li>Dust & debris removal</li>
-              <li>Detailing & snag support</li>
-              <li>Windows & frames</li>
-              <li>Final presentation clean</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="svc-icon" aria-hidden="true">🏫</div>
-            <h3>Education facilities</h3>
-            <p class="muted">Child‑safe, non‑toxic products and strict hygiene protocols for schools and nurseries.</p>
-            <ul class="tick">
-              <li>Classrooms & playgrounds</li>
-              <li>Cafeterias & kitchens</li>
-              <li>Daily sanitisation</li>
-              <li>Trusted, vetted staff</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="svc-icon" aria-hidden="true">🏬</div>
-            <h3>Retail spaces</h3>
-            <p class="muted">Impeccable presentation for showrooms and high‑footfall environments to elevate customer experience.</p>
-            <ul class="tick">
-              <li>Displays & fixtures</li>
-              <li>Entrance & façade care</li>
-              <li>Polished floors</li>
-              <li>Flexible hours</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="svc-icon" aria-hidden="true">✨</div>
-            <h3>Deep clean</h3>
-            <p class="muted">Periodic intensive cleans for HVAC vents, upholstery, carpets and hard‑to‑reach areas.</p>
-            <ul class="tick">
-              <li>Carpet extraction</li>
-              <li>Upholstery refresh</li>
-              <li>Air‑vent detailing</li>
-              <li>Sanitary steam clean</li>
-            </ul>
-          </article>
-          <article class="card">
-            <div class="svc-icon" aria-hidden="true">🌙</div>
-            <h3>Out‑of‑hours</h3>
-            <p class="muted">Schedules that work around you—evenings, weekends and bank holidays by arrangement.</p>
-            <ul class="tick">
-              <li>Unobtrusive teams</li>
-              <li>Key‑holding available</li>
-              <li>Rapid response</li>
-              <li>Secure procedures</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about" id="about" aria-labelledby="about-hd">
-      <div class="container about-inner">
-        <div>
-          <div class="about-photo" role="img" aria-label="Professional cleaning team at work">Professional Team</div>
-        </div>
-        <div>
-          <div class="section-hd" style="text-align:left; margin:0 0 18px 0">
-            <h2 id="about-hd">A family‑run organisation with enterprise standards</h2>
-            <p class="muted">Founded in 2019, IGAL MOTION blends personable service with rigorous quality control. Every contract receives a dedicated supervisor, checklists per area and periodic audits.</p>
-          </div>
-          <div class="stats">
-            <div class="stat-plain"><div class="n">500+</div><div class="l">Projects completed</div></div>
-            <div class="stat-plain"><div class="n">5+</div><div class="l">Years operating</div></div>
-            <div class="stat-plain"><div class="n">98%</div><div class="l">Retention rate</div></div>
-            <div class="stat-plain"><div class="n">100%</div><div class="l">Satisfaction policy</div></div>
-          </div>
-          <p class="muted">We’re fully insured and bonded. Staff are background‑checked, trained to site‑specific RAMS and uniformed on duty.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="process" id="process" aria-labelledby="process-hd">
-      <div class="container">
-        <div class="section-hd">
-          <h2 id="process-hd">How we work</h2>
-          <p class="muted">Simple, transparent and efficient—from first call to steady‑state quality.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><div class="bubble">1</div><h3>Consult</h3><p class="muted">Site walk‑through and tailored scope.</p></div>
-          <div class="step"><div class="bubble">2</div><h3>Quote</h3><p class="muted">Clear pricing—no hidden fees.</p></div>
-          <div class="step"><div class="bubble">3</div><h3>Schedule</h3><p class="muted">Agree hours and access.</p></div>
-          <div class="step"><div class="bubble">4</div><h3>Maintain</h3><p class="muted">KPIs, audits and feedback loop.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" aria-labelledby="test-hd">
-      <div class="container">
-        <div class="section-hd">
-          <h2 id="test-hd">What our clients say</h2>
-          <p class="muted">Measured by outcomes—productivity, presentation and peace of mind.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card quote">
-            <p>“IGAL MOTION elevated our office standards. Reliable teams and spotless results.”</p>
-            <div class="author"><div class="avatar" aria-hidden="true">JR</div><div><strong>Jennifer Rodriguez</strong><div class="stars" aria-label="5 out of 5 stars">★★★★★</div></div></div>
-          </article>
-          <article class="card quote">
-            <p>“Child‑safe products and thorough routines—exactly what our nursery requires.”</p>
-            <div class="author"><div class="avatar" aria-hidden="true">MS</div><div><strong>Michael Stevens</strong><div class="stars" aria-label="5 out of 5 stars">★★★★★</div></div></div>
-          </article>
-          <article class="card quote">
-            <p>“Post‑build handover was ahead of schedule thanks to their detailing team.”</p>
-            <div class="author"><div class="avatar" aria-hidden="true">DK</div><div><strong>David Kim</strong><div class="stars" aria-label="5 out of 5 stars">★★★★★</div></div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA BAND -->
-    <section class="container cta" aria-label="Call to action">
-      <div class="inner">
-        <div>
-          <h2 style="margin:.25rem 0">Ready to experience the difference?</h2>
-          <p class="muted" style="color:rgba(255,255,255,.92)">Join New York businesses that trust IGAL MOTION for discreet, high‑standard cleaning.</p>
-        </div>
-        <div>
-          <a class="btn btn-accent" href="#quote">Get your free quote</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / QUOTE -->
-    <section id="quote" class="contact" aria-labelledby="contact-hd">
-      <div class="container">
-        <div class="section-hd">
-          <h2 id="contact-hd">Let’s start your cleaning plan</h2>
-          <p class="muted">We reply within one working day. For urgent enquiries call <a href="tel:+12125550123">+1 212 555 0123</a>.</p>
-        </div>
-        <div class="grid grid-2">
-          <div class="card">
-            <form id="contactForm" novalidate>
-              <div class="grid grid-2">
-                <div>
-                  <label for="name">Full name</label>
-                  <input id="name" name="name" autocomplete="name" required />
-                </div>
-                <div>
-                  <label for="email">Email address</label>
-                  <input id="email" name="email" type="email" autocomplete="email" required />
-                </div>
-              </div>
-              <div class="grid grid-2">
-                <div>
-                  <label for="phone">Phone</label>
-                  <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+1 212 555 0123" />
-                </div>
-                <div>
-                  <label for="service">Service needed</label>
-                  <select id="service" name="service" required>
-                    <option value="" disabled selected>Select…</option>
-                    <option>Office cleaning</option>
-                    <option>Construction clean‑up</option>
-                    <option>Education facilities</option>
-                    <option>Retail spaces</option>
-                    <option>Deep clean</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="grid grid-2">
-                <div>
-                  <label for="postcode">Postcode (ZIP)</label>
-                  <input id="postcode" name="postcode" inputmode="text" placeholder="10001" />
-                </div>
-                <div>
-                  <label for="frequency">Frequency</label>
-                  <select id="frequency" name="frequency">
-                    <option value="" selected>One‑off</option>
-                    <option>Daily</option>
-                    <option>Weekly</option>
-                    <option>Fortnightly</option>
-                    <option>Monthly</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label for="message">Notes</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell us about your space, m²/ft², access and preferred start date…"></textarea>
-                <p class="help">By submitting, you agree we may contact you regarding your enquiry.</p>
-              </div>
-              <!-- Honeypot -->
-              <input type="text" name="company" id="company" tabindex="-1" aria-hidden="true" style="position:absolute; left:-10000px; opacity:0" />
-              <button class="btn btn-accent" type="submit">Send message</button>
-              <div class="help" id="formHelp" role="status" aria-live="polite"></div>
-            </form>
-          </div>
-
-          <aside class="card" aria-label="Contact information">
-            <h3 style="margin-top:0">Contact</h3>
-            <p><strong>IGAL MOTION</strong><br>Serving all of New York City and surrounding areas.</p>
-            <p>📞 <a href="tel:+12125550123">+1 212 555 0123</a><br>✉️ <a href="mailto:info@igalmotion.com">info@igalmotion.com</a></p>
-            <p>Hours: <time datetime="2025-09-03">Mon–Fri 08:00–18:00</time>, Sat 09:00–16:00, Sun emergency only.</p>
-            <p class="muted">Fully insured and bonded • Eco‑friendly options • Key‑holding by arrangement</p>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="container foot-top">
-      <div>
-        <a class="brand" href="#home" aria-label="IGAL MOTION home">
-          <span class="brand-mark" aria-hidden="true">✨</span>
-          <span class="brand-name" style="-webkit-text-fill-color:initial; color:#fff">IGAL MOTION</span>
-        </a>
-        <p style="margin-top:10px; color:#cdd6e1">Your trusted commercial cleaning partner in New York. Family‑run since 2019.</p>
-      </div>
-      <div>
-        <h4>Quick links</h4>
-        <nav aria-label="Footer">
-          <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#quote">Get a quote</a></li>
-          </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px">
-          <li><a href="#services">Office cleaning</a></li>
-          <li><a href="#services">Construction clean‑up</a></li>
-          <li><a href="#services">Education facilities</a></li>
-          <li><a href="#services">Retail spaces</a></li>
-          <li><a href="#services">Deep clean</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>New York, NY<br>📞 <a href="tel:+12125550123">+1 212 555 0123</a><br>✉️ <a href="mailto:info@igalmotion.com">info@igalmotion.com</a></p>
-      </div>
-    </div>
-    <div class="container foot-bottom">
-      <div>© <span id="year"></span> IGAL MOTION. All rights reserved.</div>
-      <div>
-        <a href="#">Privacy</a> · <a href="#">Terms</a>
-      </div>
-    </div>
+    </header>
 
-    <!-- JSON‑LD (Schema.org) → CleaningService -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CleaningService",
-      "name": "IGAL MOTION",
-      "url": "https://www.igalmotion.com/",
-      "telephone": "+1-212-555-0123",
-      "logo": "https://www.igalmotion.com/assets/logo.png",
-      "areaServed": {"@type": "City", "name": "New York"},
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
-        "addressCountry": "US"
-      },
-      "openingHoursSpecification": [
-        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
-        {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"16:00"}
-      ],
-      "sameAs": [
-        "https://www.facebook.com/igalmotion",
-        "https://www.linkedin.com/company/igalmotion"
-      ]
-    }
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Family-Owned Since 2019</span>
+                <h1>Professional Commercial Cleaning Services</h1>
+                <p class="hero-description">
+                    We pride ourselves on keeping our customers satisfied by providing high-quality cleaning services. Each facility, from small office spaces to large office buildings, comes with its own set of cleaning requirements, which is why our services are customized to each individual workspace.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Request Quote</a>
+                    <a href="tel:1234567890" class="btn btn-secondary">Call Now</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">
+                    Comprehensive commercial cleaning solutions tailored to your specific requirements
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">01</div>
+                    <h3 class="service-title">Office Cleaning Service</h3>
+                    <p class="service-description">
+                        Professional cleaning services to maintain cleanliness and hygiene in office environments. Customized to your specific needs.
+                    </p>
+                    <ul class="service-features">
+                        <li>Dusting and wiping surfaces</li>
+                        <li>Vacuuming and mopping</li>
+                        <li>Emptying trash bins</li>
+                        <li>Sanitizing and disinfecting</li>
+                        <li>Restroom cleaning and sanitization</li>
+                        <li>Window cleaning</li>
+                        <li>Specialized cleaning tasks</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">02</div>
+                    <h3 class="service-title">Special Event Cleaning</h3>
+                    <p class="service-description">
+                        Complete venue cleanup and maintenance before and after weddings, corporate functions, conferences, and trade shows.
+                    </p>
+                    <ul class="service-features">
+                        <li>Post-event cleanup</li>
+                        <li>Floor care</li>
+                        <li>Bathroom sanitation</li>
+                        <li>Waste disposal</li>
+                        <li>Furniture arrangement</li>
+                        <li>Kitchen area cleaning</li>
+                        <li>Customization options</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">03</div>
+                    <h3 class="service-title">Carpet Cleaning</h3>
+                    <p class="service-description">
+                        Expert technicians use specialized equipment to remove dirt, stains, and allergens, extending carpet lifespan.
+                    </p>
+                    <ul class="service-features">
+                        <li>Professional expertise</li>
+                        <li>Advanced equipment</li>
+                        <li>Deep stain removal</li>
+                        <li>Allergen elimination</li>
+                        <li>Regular maintenance</li>
+                        <li>Additional services</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">04</div>
+                    <h3 class="service-title">Floor Cleaning</h3>
+                    <p class="service-description">
+                        Comprehensive floor maintenance for all surface types using specialized equipment and techniques.
+                    </p>
+                    <ul class="service-features">
+                        <li>Hardwood floor care</li>
+                        <li>Laminate and vinyl cleaning</li>
+                        <li>Tile and grout restoration</li>
+                        <li>Concrete floor treatment</li>
+                        <li>Sweeping and vacuuming</li>
+                        <li>Polishing and buffing</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">05</div>
+                    <h3 class="service-title">Disinfection & Sanitation</h3>
+                    <p class="service-description">
+                        Professional disinfection focusing on eliminating harmful bacteria, viruses, and fungi from surfaces.
+                    </p>
+                    <ul class="service-features">
+                        <li>COVID-19 protocols (free for clients)</li>
+                        <li>Safe chemical application</li>
+                        <li>Surface sanitization</li>
+                        <li>High-touch area focus</li>
+                        <li>EPA-approved products</li>
+                        <li>Air quality improvement</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">06</div>
+                    <h3 class="service-title">Furniture Cleaning</h3>
+                    <p class="service-description">
+                        Professional upholstery and leather cleaning services to extend furniture lifespan.
+                    </p>
+                    <ul class="service-features">
+                        <li>Upholstery cleaning</li>
+                        <li>Leather conditioning</li>
+                        <li>Stain removal treatments</li>
+                        <li>Odor elimination</li>
+                        <li>Fabric protection</li>
+                        <li>Allergy treatments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>About IGAL MOTION</h2>
+                    <p class="about-text">
+                        We are a family-owned business that started as housekeepers with a vision and have grown day by day. Today, we maintain over 5 contracts per month and continue to expand our reach across New York.
+                    </p>
+                    <p class="about-text">
+                        Since 2019, IGAL MOTION has served a wide variety of janitorial services for construction offices, businesses, kindergartens, and more. We understand that each facility comes with its own set of cleaning requirements, which is why our services are customized to each individual workspace.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="about-stat-number">2019</div>
+                            <div class="about-stat-label">Established</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">5+</div>
+                            <div class="about-stat-label">Monthly Contracts</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">100%</div>
+                            <div class="about-stat-label">Customer Satisfaction</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="about-stat-number">24/7</div>
+                            <div class="about-stat-label">Availability</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    Professional Cleaning Team
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose IGAL MOTION</h2>
+                <p class="section-subtitle">
+                    What sets us apart in the commercial cleaning industry
+                </p>
+            </div>
+            
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <span class="why-us-number">01</span>
+                    <h3>Customized Solutions</h3>
+                    <p>Every facility has unique requirements. We tailor our services to meet your specific needs and schedule.</p>
+                </div>
+                <div class="why-us-item">
+                    <span class="why-us-number">02</span>
+                    <h3>Experienced Team</h3>
+                    <p>Our trained professionals bring years of experience and attention to detail to every cleaning task.</p>
+                </div>
+                <div class="why-us-item">
+                    <span class="why-us-number">03</span>
+                    <h3>Quality Guarantee</h3>
+                    <p>We stand behind our work with a 100% satisfaction guarantee on all our cleaning services.</p>
+                </div>
+                <div class="why-us-item">
+                    <span class="why-us-number">04</span>
+                    <h3>Competitive Pricing</h3>
+                    <p>Transparent, fair pricing with no hidden fees. Quality service that fits your budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience Professional Cleaning?</h2>
+            <p>Contact us today for a free consultation and customized quote</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+                <a href="tel:1234567890" class="btn btn-secondary">Call Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">
+                    Get in touch for a customized cleaning solution
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    
+                    <div class="contact-item">
+                        <h4>Location</h4>
+                        <p>Serving all of New York</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>(123) 456-7890</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>info@igalmotion.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 8AM - 6PM<br>
+                        Saturday: 9AM - 4PM<br>
+                        Sunday: Emergency Services Only</p>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Your Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="service">Service Needed</label>
+                        <select id="service" class="form-input">
+                            <option>Select a service</option>
+                            <option>Office Cleaning</option>
+                            <option>Special Event Cleaning</option>
+                            <option>Carpet Cleaning</option>
+                            <option>Floor Cleaning</option>
+                            <option>Disinfection Services</option>
+                            <option>Furniture Cleaning</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" class="form-textarea" placeholder="Tell us about your cleaning needs..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>IGAL MOTION</h3>
+                    <p>Professional commercial cleaning services in New York. Family-owned and operated since 2019, we're committed to creating cleaner, healthier workspaces for our clients.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Office Cleaning</a></li>
+                        <li><a href="#services">Event Cleaning</a></li>
+                        <li><a href="#services">Carpet Cleaning</a></li>
+                        <li><a href="#services">Floor Cleaning</a></li>
+                        <li><a href="#services">Disinfection</a></li>
+                        <li><a href="#services">Furniture Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>New York, NY<br>
+                    Phone: (123) 456-7890<br>
+                    Email: info@igalmotion.com<br>
+                    Mon-Fri: 8AM - 6PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 IGAL MOTION. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+        
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry. We will contact you within 24 hours.');
+            e.target.reset();
+        });
     </script>
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav toggle (accessible)
-    const toggle = document.getElementById('menuToggle');
-    const nav = document.getElementById('primaryNav');
-    toggle?.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-
-    // Smooth anchor offset for sticky header
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href');
-        const el = id && document.querySelector(id);
-        if (el) {
-          e.preventDefault();
-          const y = el.getBoundingClientRect().top + window.scrollY - 80;
-          window.scrollTo({ top:y, behavior:'smooth' });
-          nav.classList.remove('open');
-          toggle?.setAttribute('aria-expanded','false');
-        }
-      });
-    });
-
-    // Simple form handlers (replace ACTION_URL with your endpoint or email service)
-    function serialise(form) {
-      return [...new FormData(form).entries()].reduce((o,[k,v])=> (o[k]=v,o),{});
-    }
-
-    function submitForm(form, helpEl) {
-      const data = serialise(form);
-      if (data.company) { // Honeypot
-        helpEl.textContent = 'Thanks!';
-        return;
-      }
-      helpEl.textContent = 'Submitting…';
-      // Demo only: mailto fallback. Replace with fetch('ACTION_URL', { method:'POST', body: JSON.stringify(data) })
-      const body = encodeURIComponent(Object.entries(data).map(([k,v])=>`${k}: ${v}`).join('\n'));
-      window.location.href = `mailto:info@igalmotion.com?subject=Quote%20request&body=${body}`;
-      setTimeout(()=> helpEl.textContent = 'Thank you—we will reply within one working day.', 400);
-      form.reset();
-    }
-
-    document.getElementById('contactForm')?.addEventListener('submit', e => {
-      e.preventDefault();
-      submitForm(e.target, document.getElementById('formHelp'));
-    });
-    document.getElementById('heroQuote')?.addEventListener('submit', e => {
-      e.preventDefault();
-      submitForm(e.target, document.getElementById('hq-help'));
-    });
-  </script>
 </body>
 </html>
